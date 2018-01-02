@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+
+
+<html lang="pl">
+  <head>
+    <meta charset="utf-8"/>
+    <meta name="description" content="Page about Bartosz Wajer"/>
+    <link href="https://fonts.googleapis.com/css?family=Spectral+SC&amp;subset=latin-ext" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+    <title>Page about Bartosz Wajer</title>
+  </head>
+  <body>
+    <script type="text/javascript">//skrypt javascript
+      alert("STRONA W BUDOWNIE");
+    </script>
+    <div class="container">
+      <div class="content">
+        <div class="title">
+        <header><img src="MEDIA/rozwoj5.jpg" width="100%">
+        </div>
+        <nav>
+          <ul>
+            <li class="button"><a href="index.html"><span>Home</span></a></li>
+            <li class="button"><a href="projekty.html"><span>Projects</span></a></li>
+            <li class="button"><a href="interests.html"><span>Interests</span</a></li>
+            <li class="button"><a href="aboutme.html"><span>CV</span</a></li>
+            <li class="button"><a href="kontakt.html"><span>Contact</span></a></li>
+            <li class="button" id="register"><a href="register.html"><span>Register</span></a></li>
+          </ul>
+        </nav>
+       </header>
+       <div class="main-content">
+        <section>
+          <form action="#" method="post" autocomplete="off">
+            <div class="row">
+                <label for="name">NAME</label>
+                <input id="name" type="text" required autofocus="true">
+            </div>
+            <div class="row">
+                <label for="email">EMAIL</label>
+                <input id="email" type="email" required>
+            </div>
+            <div class="row">
+                <label for="password">PASSWORD</label>
+                <input id="password" type="password" required>
+            </div>
+            <div class="row">
+                <label for="date">DATE</label>
+                <input id="date" type="date">
+            </div>
+            <div class="row">
+                <label for="gender">GENDER</label>
+                <select id="gender">
+                  <option>man</option>
+                  <option>woman</option>
+                </select>
+            </div>
+            <div class="row">
+                <label for="region">REGION</label>
+                <input id="region" type="text" list="regions">
+                <datalist id="regions">
+                  <option value="POLAND"></option>
+                  <option value="ENGLAND"></option>
+            </div>
+            <div class="row">
+                <label for="code">CODE</label>
+                <input id="code" type="text" pattern="\d{2}-\d{3}$" placeholder="XX-XXX">
+            </div>
+            <div class="row">
+                <label for="description">DESCRIPTION</label>
+                <textarea id="description" maxlength="500" rows="5"></textarea>
+            </div>
+            <div class="row">
+                <label for="avatar">AVATAR</label>
+                <input id="avatar" type="file">
+            </div>
+            <div class="row">
+                <input id="checkbox" type="checkbox" required>
+                <span>Akceptuję regulamin</span>
+            </div>
+            <div class="row">
+                <input type="submit">
+            </div>
+          </form>
+        </section>
+      </div>
+        <div class="sidebar">
+          <aside>
+              REKLAMY
+          </aside>
+        </div>
+        </div>
+        </div>
+    <footer>Wszystkie prawa zastrzeżone &copy 2017<br>
+      Created by Bartosz Wajer
+    </footer>
+    </div>
+  </body>
+</html>

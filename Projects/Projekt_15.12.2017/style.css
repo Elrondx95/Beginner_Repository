@@ -1,0 +1,73 @@
+body{
+    background-color: rgb(126, 126, 126);
+}
+
+<!--STRUKTURA-->
+div.container{
+    width: 1140px;
+    margin: auto;
+    padding: 0 15px;
+}
+div.head{
+    height: 20%;
+    border-radius: 50px;
+    overflow: auto;
+}
+div.content{
+    overflow: auto;
+}
+div.high_content{
+    width: auto;
+    height: auto;
+    background-color: rgba(5, 0, 92, 0.789);
+    border-radius: 50px;
+    text-align: center;
+}
+div.main-content{
+    width: auto;
+    height: 30%;
+    background-color: rgba(5, 0, 92, 0.789);
+    border-radius: 50px;
+} 
+div.down{
+    background-color: cadetbluep;
+    width: auto;
+    height: 20%; 
+    text-align: center;
+    overflow: auto;
+}
+
+<!--BLOCKI-->
+article, p, footer, header, section, aside, figure{
+    display: block;
+    padding: 10;
+    border-radius: 5px;
+}
+article, section, p{
+    margin: 5, 15;
+    text-align: center;
+}
+footer{
+    text-align: center;
+}
+<!--MENU_NAWIGACYJNE-->
+nav ul{
+    overflow: auto;
+}
+nav ul li{
+    text-align: center;
+    list-style: none;
+    float: left;
+    overflow: auto;
+    display: table;
+    margin-right: 10px;    
+}
+.button {
+    background-color: rgba(2, 0, 26, 0.5);
+    border-radius: 5px;
+}
+.eye{
+    margin: 10 15;
+    width: auto;
+    height: auto;
+}

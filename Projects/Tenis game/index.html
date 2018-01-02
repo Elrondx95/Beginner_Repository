@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+
+
+
+<html lang="pl">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Gra Tenis JS</title>
+    <style>
+        body {
+            margin: 0;
+            padding: 0;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            height: 100vh;
+            background-color: darkgray;
+        }
+        canvas {
+            border: 3px solid #fff;
+        }
+    </style>
+</head>
+<body>
+    <canvas></canvas>
+    <script>
+        const canv = document.querySelector('canvas');
+        const ctx = canv.getContext('2d');
+    
+        canv.height = 300;
+        canv.width = 480;
+        
+        const cw = canv.width;//STÓŁ
+        const ch = canv.height;
+        
+        const ballSize = 15;//PIŁKA
+        let ballX = cw/2 - ballSize/2;
+        let ballY = ch/2 - ballSize/2;
+        
+        const palletY = 100;
+        const palletX = 10;
+        
+        const playerX = 70;
+        const compX = 410;
+        
+        let playerY = 100;
+        let compY = 100;
+        
+        const lineWidht = 4;
+        const lineHight = 10;
+        
+        let ballSpeedX = 1;
+        let ballSpeedY = 1;
+        
+        let ioSpeedY = 2;
+        
+        function io(){ //funkcja wywołująca COMP
+            ctx.fillStyle = 'yelow';
+            ctx.fillRect(compX,compY,palletX,palletY);
+            compY -= ioSpeedY;
+            
+            if(compY <= 0 || compY + palletY >= ch)
+                {
+                    ioSpeedY = -ioSpeedY;
+                }
+        }
+        
+        function player(){ //funkcja wywołująca PLAYER
+            ctx.fillStyle = 'green';
+            ctx.fillRect(playerX,playerY,palletX,palletY);
+             
+        }
+        
+        function table(){ //funkcja wywołująca STÓŁ
+            ctx.fillStyle = 'black';
+            ctx.fillRect(0,0,cw,ch);
+            for(let linia = 10; linia < ch; linia += 25){
+                ctx.fillStyle = 'gray';
+                ctx.fillRect(cw/2 - lineWidht/2,linia,lineWidht,lineHight);
+            }
+           
+            
+        }
+        function ball(){
+             ctx.fillStyle = 'white';
+             ctx.fillRect(ballX,ballY,ballSize,ballSize);
+             ballX += ballSpeedX;
+             ballY += ballSpeedY;
+            
+            if(ballY <= 0 || ballY + ballSize >= ch)
+                {
+                    ballSpeedY = -ballSpeedY;
+                }
+            if(ballX <= 0 || ballX + ballSize >= cw)
+                {
+                    ballSpeedX = -ballSpeedX;
+                }
+        }
+        
+       
+        
+        function game(){
+        
+        table()
+        ball()
+        player()
+        io()
+        }
+        setInterval(game,25)
+    </script>
+</body>
+</html>

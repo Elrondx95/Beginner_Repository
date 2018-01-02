@@ -1,0 +1,169 @@
+body {
+  background: url("MEDIA/rozwoj.jpg");
+  background-size: 100%;
+  background-attachment: fixed;
+  font-family: 'Spectral SC', serif;
+  font-style: bold;
+}
+/*
+GŁÓWNE DIVY, STRUKTURA
+*/
+div.container{
+  width: 1140px;
+  height: 100%;
+  margin: auto;
+  padding: 0 15px;
+}
+header{
+  margin: 20px 0;
+}
+div.logo{
+  margin: 0px;
+  height: 285px;
+}
+nav{
+  margin: 0px;
+}
+content{
+  height: 60%;
+}
+div.l-side{
+  width:15%;
+  float: left;
+  padding: 5px;
+}
+div.main-content{
+  width: 60%;
+  float: left;
+}
+div.sidebar{
+  width: 15%;
+  float: left;
+  }
+footer{
+  height: 15%;
+  clear: both;
+  margin-top: 15px;
+  text-align: center;
+}
+div.l-side, div.main-content, sidebar, aside, footer{
+  background: rgba(255,255,255, 0.85);
+  padding: 10px;
+  border-radius: 5px;
+  margin: 10px;
+}
+/*
+BLOCKI
+*/
+
+section, article{
+  background: rgba(255,255,255, 0.85);
+  text-align: left;
+  margin: 15px;
+  overflow: auto;
+  display: block;
+}
+article div.projekty{
+  margin-top: 20px;
+  text-align: center;
+}
+/*
+MENU NAWIGACYJNE
+*/
+nav ul{
+  list-style: none;
+  overflow: auto;
+  background: rgba(0,0,10,0.8);
+  border-radius: 5px;
+  margin: auto;
+}
+nav ul li{
+  float: left;
+  margin-right: 50px;
+  height: 30px;
+  width: 100px;
+  text-align: center;
+  margin-top: 5px;
+  margin-bottom: 5px;
+}
+nav ul li a{
+  color: #FFF;
+  text-decoration: none;
+  font-size: 17px;
+  text-align: center;
+  display: table;
+  width: 100%;
+}
+nav ul li a span{
+  display: table-cell;
+  vertical-align: middle;
+}
+.button{
+  background: rgba(0,0,10,0.4);
+  border-radius: 5px;
+}
+.button *:hover{
+  background: rgba(20,20,10,0.80);
+  border-radius: 5px;
+}
+#register{
+  float: right;
+}
+
+/*
+ZDJĘCIA
+*/
+figure{
+  float: left;
+}
+#first, #third{
+  float: right;
+}
+#CV{
+  text-align: center;
+}
+/*
+FORMULARZ REJESTRACYJNY
+*/
+form{
+  background: rgba(0,0,10,0.8);
+  padding: 15px;
+  margin-right: 15px;
+}
+form div.row{
+  width: 50%;
+  margin: auto;
+  margin-bottom: 10px;
+}
+form label{
+  width: 30%;
+  text-align: end;
+  display: block;
+  float: left;
+  margin-right: 20px;
+  color: white;
+}
+form input, form select, form textarea{
+  padding: 5px;
+  border-radius: 5px;
+  width: 200px;
+}
+form input[type="checkbox"]{
+   position: relative;
+   left: 30%;
+   width: auto;
+}
+form span{
+  position: relative;
+  left: 30%;
+  color: white;
+}
+form input[type="submit"]{
+   width: 100px;
+   background: gray;
+   border: none;
+   cursor: pointer;
+}
+form div.row:last-of-type{
+  text-align: center;
+}
